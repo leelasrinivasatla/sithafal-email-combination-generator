@@ -1,7 +1,7 @@
 document.getElementById('emailForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Get input values
+    // Get input values and clean spaces
     const firstName = document.getElementById('firstName').value.trim().replace(/\s+/g, '').toLowerCase();
     const lastName = document.getElementById('lastName').value.trim().replace(/\s+/g, '').toLowerCase();
     const birthYear = document.getElementById('birthYear').value;
