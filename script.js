@@ -56,27 +56,4 @@ function generateEmailCombinations(firstName, lastName, birthYear, day, month, d
     }
 
     if (day && month) {
-        combinations.push(`${firstName}.${lastName}${month}${day}@${domain}`);
-    }
-
-    // Combinations with just the first or last name
-    combinations.push(`${firstName}@${domain}`);
-    combinations.push(`${lastName}@${domain}`);
-
-    // Return unique combinations
-    return [...new Set(combinations)];
-}
-
-document.getElementById('copyButton').addEventListener('click', function() {
-    const emailList = document.getElementById('emailList');
-    const emailItems = [...emailList.querySelectorAll('li')].map(item => item.textContent);
-    const emailString = emailItems.join('\n');
-
-    navigator.clipboard.writeText(emailString).then(() => {
-        const copyAlert = document.getElementById('copyAlert');
-        copyAlert.style.display = 'block';
-        setTimeout(() => {
-            copyAlert.style.display = 'none';
-        }, 2000);
-    });
-});
+        combinations.push(`${firstName}.${lastName
