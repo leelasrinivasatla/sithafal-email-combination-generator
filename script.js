@@ -56,4 +56,24 @@ function generateEmailCombinations(firstName, lastName, birthYear, day, month, d
     }
 
     if (day && month) {
-        combinations.push(`${firstName}.${lastName
+        combinations.push(`${firstName}.${lastName}${day}${month}@${domain}`);
+        combinations.push(`${firstName}${lastName}${day}${month}@${domain}`);
+    }
+
+    return combinations;
+}
+
+// Copy to clipboard functionality
+document.getElementById('copyButton').addEventListener('click', function() {
+    const emails = document.getElementById('emailList').innerText;
+
+    navigator.clipboard.writeText(emails).then(function() {
+        const copyAlert = document.getElementById('copyAlert');
+        copyAlert.style.display = 'block';
+        setTimeout(() => {
+            copyAlert.style.display = 'none';
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+    });
+});
