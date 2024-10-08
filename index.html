@@ -8,9 +8,13 @@
 </head>
 <body>
 
+<header>
+    <img src="Sithafal Logo_White.jpg" alt="Sithafal Logo" class="logo">
+    <h1>Sithafal's Email Combination Generator Tool</h1>
+</header>
+
 <div class="container">
     <div class="form-container">
-        <h1>Sithafal's Email Combination Generator Tool</h1>
         <form id="emailForm">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="firstName" required>
@@ -32,13 +36,14 @@
 
             <input type="submit" value="Generate">
         </form>
+    </div>
 
+    <div class="result-container">
         <div class="result hidden" id="result">
             <h2>Email Combinations:</h2>
             <ul id="emailList"></ul>
             <button id="copyButton">Copy All</button>
         </div>
-
         <div class="copy-alert" id="copyAlert">
             Email combinations copied to clipboard!
         </div>
