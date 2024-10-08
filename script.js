@@ -73,7 +73,7 @@ document.getElementById('copyButton').addEventListener('click', function() {
         setTimeout(() => {
             copyAlert.style.display = 'none';
         }, 2000);
-    }).catch(function(err) {
-        console.error('Could not copy text: ', err);
+    }).catch(function(error) {
+        console.error('Failed to copy text: ', error);
     });
 });
