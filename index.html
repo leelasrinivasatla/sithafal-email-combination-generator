@@ -7,49 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <img src="Sithafal Logo_White.jpg" alt="Sithafal Logo" class="logo">
-    <h1>Sithafal's Email Combination Generator Tool</h1>
-</header>
-
-<div class="container">
-    <div class="form-container">
-        <form id="emailForm">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-
-            <label for="birthYear">Birth Year (Optional):</label>
-            <input type="number" id="birthYear" name="birthYear" min="1900" max="2099" step="1">
-
-            <label for="birthDay">Birth Day (Optional):</label>
-            <input type="number" id="birthDay" name="birthDay" min="1" max="31">
-
-            <label for="birthMonth">Birth Month (Optional):</label>
-            <input type="number" id="birthMonth" name="birthMonth" min="1" max="12">
-
-            <label for="domain">Domain:</label>
-            <input type="text" id="domain" name="domain" placeholder="e.g. gmail.com" required>
-
-            <input type="submit" value="Generate">
-        </form>
-    </div>
-
-    <div class="result-container">
-        <div class="result hidden" id="result">
-            <h2>Email Combinations:</h2>
-            <ul id="emailList"></ul>
-            <button id="copyButton">Copy All</button>
+    <div class="container">
+        <header>
+            <img src="Sithafal_Logo_White.jpg" alt="Sithafal Logo" id="logo">
+            <h1>Sithafal's Email Combination Generator Tool</h1>
+        </header>
+        <div class="content">
+            <div class="form-section">
+                <form id="emailForm">
+                    <div class="input-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="domain">Domain (e.g., gmail.com):</label>
+                        <input type="text" id="domain" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="birthYear">Birth Year (optional):</label>
+                        <input type="text" id="birthYear" maxlength="4">
+                    </div>
+                    <div class="input-group">
+                        <label for="birthDay">Birth Day (optional):</label>
+                        <input type="text" id="birthDay" maxlength="2">
+                    </div>
+                    <div class="input-group">
+                        <label for="birthMonth">Birth Month (optional):</label>
+                        <input type="text" id="birthMonth" maxlength="2">
+                    </div>
+                    <button type="submit" id="generateButton">Generate</button>
+                </form>
+            </div>
+            <div class="result-section hidden" id="result">
+                <h2>Generated Email Combinations:</h2>
+                <ul id="emailList"></ul>
+                <button id="copyButton">Copy All</button>
+                <div id="copyAlert" class="hidden">Copied to clipboard!</div>
+            </div>
         </div>
-        <div class="copy-alert" id="copyAlert">
-            Email combinations copied to clipboard!
-        </div>
     </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
