@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sithafal's Email Combination Generator Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h1>Sithafal's Email Combination Generator Tool</h1>
+        <form id="emailForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="birthYear">Birth Year (Optional):</label>
+            <input type="number" id="birthYear" name="birthYear" min="1900" max="2099" step="1">
+
+            <label for="birthDay">Birth Day (Optional):</label>
+            <input type="number" id="birthDay" name="birthDay" min="1" max="31">
+
+            <label for="birthMonth">Birth Month (Optional):</label>
+            <input type="number" id="birthMonth" name="birthMonth" min="1" max="12">
+
+            <label for="domain">Domain:</label>
+            <input type="text" id="domain" name="domain" placeholder="e.g. gmail.com" required>
+
+            <input type="submit" value="Generate">
+        </form>
+
+        <div class="result hidden" id="result">
+            <h2>Email Combinations:</h2>
+            <ul id="emailList"></ul>
+            <button id="copyButton">Copy All</button>
+        </div>
+
+        <div class="copy-alert" id="copyAlert">
+            Email combinations copied to clipboard!
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
