@@ -39,7 +39,7 @@ function generateEmailCombinations(firstName, lastName, birthYear, day, month, d
     combinations.push(`${firstName}-${lastName}@${domain}`);
 
     // Initial-based combinations
-    combinations.push(`${firstName[0]}${lastName[0]}@${domain}`); // e.g. aj@gmail.com
+    combinations.push(`${firstName[0]}${lastName[0]}@${domain}`); // e.g. AJ@gmail.com
     combinations.push(`${firstName[0]}_${lastName[0]}@${domain}`);
     combinations.push(`${firstName[0]}-${lastName[0]}@${domain}`);
 
@@ -73,7 +73,7 @@ document.getElementById('copyButton').addEventListener('click', function() {
         setTimeout(() => {
             copyAlert.style.display = 'none';
         }, 2000);
-    }, function(err) {
-        console.error('Could not copy text: ', err);
+    }).catch(function(error) {
+        console.error('Failed to copy text: ', error);
     });
 });
