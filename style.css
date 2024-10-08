@@ -24,13 +24,10 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 #logo {
-    width: 200px;
+    width: 150px; /* Adjust the width as necessary */
     height: auto;
     border: 3px solid black;
     padding: 10px;
@@ -40,14 +37,12 @@ h1 {
     flex-grow: 1;
     text-align: center;
     font-size: 1.5rem;
-    margin-left: 20px;
 }
 
 .content {
     display: flex;
     flex: 1;
     justify-content: space-between;
-    padding-top: 100px; /* Adjusted to make space for the fixed header */
 }
 
 .form-section,
@@ -93,18 +88,6 @@ input {
     background-color: #333;
 }
 
-.result-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
 #copyButton {
     padding: 10px;
     font-size: 1rem;
@@ -126,23 +109,21 @@ h2 {
 
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 .hidden {
     display: none;
 }
 
-/* Adjust responsiveness for smaller devices */
+.result-container {
+    background-color: #fff; /* White background for results */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-    }
-}
-
-@media (min-width: 769px) {
-    .result-section {
-        max-width: 50%;
     }
 }
